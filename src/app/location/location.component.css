@@ -1,0 +1,25 @@
+.main-section {
+  float: left;
+  width: 65%;
+  padding: 2%;
+}
+
+.descritpion {
+  float: left;
+  width: 35%;
+  padding-left: 20px;
+}
+
+.location-img {
+  padding: 20px;
+}
+
+.properties {
+  float: left;
+  width: 25%;
+}
+
+.delete {
+  width: 250%;
+  margin-top: 20px;
+}

@@ -1,0 +1,10 @@
+.home {
+  margin: auto;
+  width: 50%;
+  height: 50%;
+  padding: 10px;
+}
+
+img {
+  border-radius: 5%;
+}

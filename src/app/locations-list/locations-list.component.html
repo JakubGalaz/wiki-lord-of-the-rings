@@ -1,0 +1,39 @@
+<p-table #dt [value]="documents" [paginator]="true" [rows]="10">
+  <ng-template pTemplate="header">
+    <tr>
+      <th [pSortableColumn]="'name'">
+        Nazwa
+        <p-sortIcon [field]="'name'"></p-sortIcon>
+      </th>
+      <th [pSortableColumn]="'position'">
+        Pozycja
+        <p-sortIcon [field]="'position'"></p-sortIcon>
+      </th>
+      <th [pSortableColumn]="'locationType'">
+        Typ lokacji
+        <p-sortIcon [field]="'locationType'"></p-sortIcon>
+      </th>
+      <th [pSortableColumn]="'residents'">
+        Mieszkańcy
+        <p-sortIcon [field]="'residents'"></p-sortIcon>
+      </th>
+      <th>Opcja</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-col>
+    <tr>
+      <td>{{ col.name }}</td>
+      <td>{{ col.position }}</td>
+      <td>{{ col.locationType }}</td>
+      <td>{{ col.residents }}</td>
+      <td>
+        <div class="button">
+          <p-button
+            label="Szczegóły"
+            [routerLink]="['/location', col.id]"
+          ></p-button>
+        </div>
+      </td>
+    </tr>
+  </ng-template>
+</p-table>

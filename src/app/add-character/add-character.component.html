@@ -1,0 +1,203 @@
+<div class="add-character">
+  <h2>Dodawanie Postaci:</h2>
+
+  <div class="input-data">
+    <form [formGroup]="characterForm" class="left">
+      <div>
+        <span class="ui-float-label">
+          <input
+            id="float-input"
+            type="text"
+            size="30"
+            formControlName="name"
+            pInputText
+          />
+          <label for="float-input">Nazwa postaci</label>
+        </span>
+
+        <div *ngIf="name.touched && name.invalid" class="warring">
+          <div *ngIf="name.errors.required">
+            <p-message severity="error" text="Pole jest wymagane"></p-message>
+          </div>
+          <div *ngIf="name.errors.minlength">
+            <p-message
+              severity="error"
+              text=" Minimum {{ name.errors.minlength.requiredLength }} znaki"
+            ></p-message>
+          </div>
+          <div *ngIf="name.errors.maxlength">
+            <p-message
+              severity="error"
+              text=" Minimum {{ name.errors.maxlength.requiredLength }} znaków"
+            ></p-message>
+          </div>
+          <div *ngIf="name.errors.pattern">
+            <p-message severity="error" text=" Tylko litery!"></p-message>
+          </div>
+        </div>
+
+        <div class="input-data">
+          <span class="ui-float-label">
+            <input
+              id="float-input"
+              type="text"
+              size="30"
+              formControlName="race"
+              pInputText
+            />
+            <label for="float-input">Rasa</label>
+          </span>
+
+          <div *ngIf="race.touched && race.invalid" class="warring">
+            <div *ngIf="race.errors.required">
+              <p-message severity="error" text="Pole jest wymagane"></p-message>
+            </div>
+            <div *ngIf="race.errors.minlength">
+              <p-message
+                severity="error"
+                text=" Minimum {{ race.errors.minlength.requiredLength }} znaki"
+              ></p-message>
+            </div>
+            <div *ngIf="race.errors.maxlength">
+              <p-message
+                severity="error"
+                text=" Minimum {{
+                  race.errors.maxlength.requiredLength
+                }} znaków"
+              ></p-message>
+            </div>
+            <div *ngIf="race.errors.pattern">
+              <p-message severity="error" text=" Tylko litery!"></p-message>
+            </div>
+          </div>
+        </div>
+
+        <div class="input-data">
+          <span class="ui-float-label">
+            <input
+              id="float-input"
+              type="text"
+              size="30"
+              formControlName="names"
+              pInputText
+            />
+            <label for="float-input">Imiona</label>
+          </span>
+
+          <div *ngIf="names.touched && names.invalid" class="warring">
+            <div *ngIf="names.errors.required">
+              <p-message severity="error" text="Pole jest wymagane"></p-message>
+            </div>
+            <div *ngIf="names.errors.minlength">
+              <p-message
+                severity="error"
+                text=" Minimum {{
+                  names.errors.minlength.requiredLength
+                }} znaki"
+              ></p-message>
+            </div>
+            <div *ngIf="names.errors.maxlength">
+              <p-message
+                severity="error"
+                text=" Minimum {{
+                  names.errors.maxlength.requiredLength
+                }} znaków"
+              ></p-message>
+            </div>
+            <div *ngIf="names.errors.pattern">
+              <p-message severity="error" text=" Tylko litery!"></p-message>
+            </div>
+          </div>
+        </div>
+
+        <div class="input-data">
+          <span class="ui-float-label">
+            <input
+              id="float-input"
+              type="text"
+              size="30"
+              formControlName="weapon"
+              pInputText
+            />
+            <label for="float-input">Broń</label>
+          </span>
+
+          <div *ngIf="weapon.touched && weapon.invalid" class="warring">
+            <div *ngIf="weapon.errors.required">
+              <p-message severity="error" text="Pole jest wymagane"></p-message>
+            </div>
+            <div *ngIf="weapon.errors.minlength">
+              <p-message
+                severity="error"
+                text=" Minimum {{
+                  weapon.errors.minlength.requiredLength
+                }} znaki"
+              ></p-message>
+            </div>
+            <div *ngIf="weapon.errors.maxlength">
+              <p-message
+                severity="error"
+                text=" Minimum {{
+                  weapon.errors.maxlength.requiredLength
+                }} znaków"
+              ></p-message>
+            </div>
+            <div *ngIf="weapon.errors.pattern">
+              <p-message severity="error" text=" Tylko litery!"></p-message>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="input-data">
+        <span class="ui-float-label">
+          <input
+            id="image"
+            type="text"
+            size="30"
+            formControlName="image"
+            pInputText
+          />
+          <label for="image">Zdjęcie postaci</label>
+        </span>
+
+        <div *ngIf="image.touched && image.invalid" class="warring">
+          <div *ngIf="image.errors.required">
+            <p-message severity="error" text="Pole jest wymagane!"></p-message>
+          </div>
+          <div *ngIf="image.errors.minlength">
+            <p-message
+              severity="error"
+              text=" Minimum {{ image.errors.minlength.requiredLength }} znaki"
+            ></p-message>
+          </div>
+          <div *ngIf="image.errors.pattern">
+            <p-message severity="error" text=" Błędny adres"></p-message>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <app-editor (newSection)="sectionUpdate($event)"></app-editor>
+      </div>
+
+      <p-button
+        label="Dodaj lokację"
+        icon="pi pi-check"
+        iconPos="left"
+        class="button"
+        [disabled]="!characterForm.invalid"
+        (onClick)="addCharacter()"
+        [routerLink]="['/home']"
+      ></p-button>
+      <p></p>
+    </form>
+
+    <div *ngIf="this.characterForm.value.image" class="right">
+      <img
+        src="{{ this.characterForm.value.image }} "
+        alt="location Photo"
+        class="resize"
+      />
+    </div>
+  </div>
+</div>

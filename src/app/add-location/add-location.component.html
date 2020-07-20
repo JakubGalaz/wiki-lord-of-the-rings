@@ -1,0 +1,216 @@
+<div class="add-location">
+  <h2>Dodawanie lokacji</h2>
+
+  <div class="input-data">
+    <form [formGroup]="locationForm" class="left">
+      <div>
+        <span class="ui-float-label">
+          <input
+            id="float-input"
+            type="text"
+            size="30"
+            formControlName="name"
+            pInputText
+          />
+          <label for="float-input">Nazwa lokacji</label>
+        </span>
+
+        <div *ngIf="name.touched && name.invalid" class="warring">
+          <div *ngIf="name.errors.required">
+            <p-message severity="error" text="Pole jest wymagane"></p-message>
+          </div>
+          <div *ngIf="name.errors.minlength">
+            <p-message
+              severity="error"
+              text=" Minimum {{ name.errors.minlength.requiredLength }} znaki"
+            ></p-message>
+          </div>
+          <div *ngIf="name.errors.maxlength">
+            <p-message
+              severity="error"
+              text=" Minimum {{ name.errors.maxlength.requiredLength }} znaków"
+            ></p-message>
+          </div>
+          <div *ngIf="name.errors.pattern">
+            <p-message severity="error" text=" Tylko litery!"></p-message>
+          </div>
+        </div>
+      </div>
+
+      <div class="input-data">
+        <span class="ui-float-label">
+          <input
+            id="position"
+            type="text"
+            size="30"
+            formControlName="position"
+            pInputText
+          />
+          <label for="position">Położenie lokacji</label>
+        </span>
+
+        <div *ngIf="position.touched && position.invalid" class="warring">
+          <div *ngIf="position.errors.required">
+            <p-message severity="error" text="Pole jest wymagane!"></p-message>
+          </div>
+          <div *ngIf="position.errors.minlength">
+            <p-message
+              severity="error"
+              text=" Minimum {{
+                position.errors.minlength.requiredLength
+              }} znaki"
+            ></p-message>
+          </div>
+          <div *ngIf="position.errors.maxlength">
+            <p-message
+              severity="error"
+              text=" Minimum {{
+                position.errors.maxlength.requiredLength
+              }} znaki"
+            ></p-message>
+          </div>
+          <div *ngIf="position.errors.pattern">
+            <p-message severity="error" text=" Tylko litery!"></p-message>
+          </div>
+        </div>
+      </div>
+
+      <div class="input-data">
+        <span class="ui-float-label">
+          <input
+            id="residents"
+            type="text"
+            size="30"
+            formControlName="residents"
+            pInputText
+          />
+          <label for="residents">Mieszkańcy</label>
+        </span>
+
+        <div *ngIf="residents.touched && residents.invalid" class="warring">
+          <div *ngIf="residents.errors.required">
+            <p-message severity="error" text=" Pole jest wymagane!"></p-message>
+          </div>
+          <div *ngIf="residents.errors.minlength">
+            <p-message
+              severity="error"
+              text=" Minimum {{
+                residents.errors.minlength.requiredLength
+              }} znaki"
+            ></p-message>
+          </div>
+          <div *ngIf="residents.errors.maxlength">
+            <p-message
+              severity="error"
+              text=" Minimum {{
+                residents.errors.maxlength.requiredLength
+              }} znaki"
+            ></p-message>
+          </div>
+          <div *ngIf="residents.errors.pattern">
+            <p-message severity="error" text=" Tylko litery!"></p-message>
+          </div>
+        </div>
+      </div>
+
+      <div class="input-data">
+        <span class="ui-float-label">
+          <input
+            id="locationType"
+            type="text"
+            size="30"
+            formControlName="locationType"
+            pInputText
+          />
+          <label for="locationType">Typ lokacji</label>
+        </span>
+
+        <div
+          *ngIf="locationType.touched && locationType.invalid"
+          class="warring"
+        >
+          <div *ngIf="locationType.errors.required">
+            <p-message severity="error" text="Pole jest wymagane!"></p-message>
+          </div>
+          <div *ngIf="locationType.errors.minlength">
+            <p-message
+              severity="error"
+              text=" Minimum {{
+                locationType.errors.minlength.requiredLength
+              }} znaki"
+            ></p-message>
+          </div>
+          <div *ngIf="locationType.errors.maxlength">
+            <p-message
+              severity="error"
+              text=" Minimum {{
+                locationType.errors.maxlength.requiredLength
+              }} znaki"
+            ></p-message>
+          </div>
+          <div *ngIf="locationType.errors.pattern">
+            <p-message severity="error" text=" Tylko litery!"></p-message>
+          </div>
+        </div>
+
+        <div class="input-data">
+          <span class="ui-float-label">
+            <input
+              id="image"
+              type="text"
+              size="30"
+              formControlName="image"
+              pInputText
+            />
+            <label for="image">Zdjęcie lokacji</label>
+          </span>
+
+          <div *ngIf="image.touched && image.invalid" class="warring">
+            <div *ngIf="image.errors.required">
+              <p-message
+                severity="error"
+                text="Pole jest wymagane!"
+              ></p-message>
+            </div>
+            <div *ngIf="image.errors.minlength">
+              <p-message
+                severity="error"
+                text=" Minimum {{
+                  image.errors.minlength.requiredLength
+                }} znaki"
+              ></p-message>
+            </div>
+            <div *ngIf="image.errors.pattern">
+              <p-message severity="error" text=" Błędny adres"></p-message>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <app-editor (newSection)="sectionUpdate($event)"></app-editor>
+      </div>
+
+      <p-button
+        label="Dodaj lokację"
+        icon="pi pi-check"
+        iconPos="left"
+        class="button"
+        [disabled]="locationForm.invalid"
+        (click)="addLocation()"
+        [routerLink]="['/locationsList']"
+      ></p-button>
+      <p></p>
+    </form>
+
+    <div *ngIf="this.locationForm.value.image" class="right">
+      <img
+        src="{{ this.locationForm.value.image }} "
+        alt="location Photo"
+        class="resize"
+      />
+    </div>
+  </div>
+</div>
+<p></p>
+<div class="editor"></div>

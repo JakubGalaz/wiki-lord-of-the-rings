@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="main-section">
+    <h1>{{ myLocation.name }}</h1>
+    <app-main-section [myName]="myLocation.section"> </app-main-section>
+    <div class="delete">
+      <app-delete-location [location]="myLocation"></app-delete-location>
+    </div>
+  </div>
+  <div class="description">
+    <div class="location-img">
+      <app-photo [image]="myLocation.image"> </app-photo>
+    </div>
+    <div class="properties">
+      <app-properties [myLocation]="myLocation"></app-properties>
+    </div>
+  </div>
+</div>
