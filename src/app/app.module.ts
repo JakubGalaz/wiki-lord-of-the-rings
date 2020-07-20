@@ -34,6 +34,7 @@ import { DeleteLocationComponent } from './location/delete-location/delete-locat
 import { UpdateSectionComponent } from './update-section/update-section.component';
 import { FieldsetModule } from 'primeng/fieldset';
 import { CharacterDeleteComponent } from './character/character-delete/character-delete.component';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +56,7 @@ import { CharacterDeleteComponent } from './character/character-delete/character
     DeleteLocationComponent,
     UpdateSectionComponent,
     CharacterDeleteComponent,
+    SearchComponent,
   ],
   imports: [
     BrowserModule,
