@@ -2,6 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { LocationsService } from '../locations.service';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
+import { Location } from '../interfaces/Location';
 
 @Component({
   selector: 'app-location',
@@ -11,7 +12,7 @@ import { Subscription } from 'rxjs';
 export class LocationComponent implements OnInit, OnDestroy {
   private routeSub: Subscription;
   locationsList;
-  myLocation;
+  myLocation: Location;
   myName: string;
   editedSection: string;
 
@@ -33,7 +34,9 @@ export class LocationComponent implements OnInit, OnDestroy {
   }
 
   editSection(e: string): void {
-    console.log('W głownym komponencie: ' + e);
+    const index = this.loacationsService.documents.indexOf(this.myLocation);
+    this.myLocation.section = e;
+    this.loacationsService.documents[index] = this.myLocation;
   }
 
   ngOnDestroy(): void {

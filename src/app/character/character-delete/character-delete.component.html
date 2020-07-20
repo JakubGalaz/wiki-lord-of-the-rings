@@ -1,0 +1,41 @@
+<p-button
+  label="Usuń ten wpis"
+  icon="pi pi-times"
+  iconPos="left"
+  styleClass="ui-button-danger"
+  (onClick)="showCard()"
+></p-button>
+
+<p-card
+  *ngIf="card"
+  header="Uwaga!"
+  subheader="Czy napewno chcesz usunąć ten wpis?"
+  [style]="{ width: '360px' }"
+  styleClass="ui-card-shadow"
+>
+  <p-header>
+    <!-- <img alt="Card" src="YOUR_IMAGE_PATH"> -->
+  </p-header>
+  <div style="line-height: 1.5;">
+    Wybranie opcji usuń trwale usunie ten wpis z bazy.
+  </div>
+  <p-footer>
+    <button
+      pButton
+      type="button"
+      label="Usuń"
+      icon="pi pi-check"
+      style="margin-right: 0.25em;"
+      (click)="deleteCharacter()"
+      [routerLink]="['/home']"
+    ></button>
+    <button
+      pButton
+      type="button"
+      label="Cancel"
+      icon="pi pi-times"
+      class="ui-button-secondary"
+      (click)="hiddenCard()"
+    ></button>
+  </p-footer>
+</p-card>

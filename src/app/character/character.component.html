@@ -1,7 +1,14 @@
 <div class="row">
   <div class="main-section">
     <h1>{{ myCharacter.name }}</h1>
-    <app-main-section [myName]="myCharacter.section"> </app-main-section>
+    <app-main-section
+      [myName]="myCharacter.section"
+      (newSection)="editSection($event)"
+    >
+    </app-main-section>
+    <div class="delete">
+      <app-character-delete></app-character-delete>
+    </div>
   </div>
   <div class="description">
     <div class="location-img">

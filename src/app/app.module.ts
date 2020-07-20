@@ -33,6 +33,7 @@ import { CardModule } from 'primeng/card';
 import { DeleteLocationComponent } from './location/delete-location/delete-location.component';
 import { UpdateSectionComponent } from './update-section/update-section.component';
 import { FieldsetModule } from 'primeng/fieldset';
+import { CharacterDeleteComponent } from './character/character-delete/character-delete.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +54,7 @@ import { FieldsetModule } from 'primeng/fieldset';
     AddCharacterComponent,
     DeleteLocationComponent,
     UpdateSectionComponent,
+    CharacterDeleteComponent,
   ],
   imports: [
     BrowserModule,
