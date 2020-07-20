@@ -31,6 +31,8 @@ import { CharacterPrpComponent } from './character/character-prp/character-prp.c
 import { AddCharacterComponent } from './add-character/add-character.component';
 import { CardModule } from 'primeng/card';
 import { DeleteLocationComponent } from './location/delete-location/delete-location.component';
+import { UpdateSectionComponent } from './update-section/update-section.component';
+import { FieldsetModule } from 'primeng/fieldset';
 
 @NgModule({
   declarations: [
@@ -50,6 +52,7 @@ import { DeleteLocationComponent } from './location/delete-location/delete-locat
     CharacterPrpComponent,
     AddCharacterComponent,
     DeleteLocationComponent,
+    UpdateSectionComponent,
   ],
   imports: [
     BrowserModule,
@@ -67,6 +70,7 @@ import { DeleteLocationComponent } from './location/delete-location/delete-locat
     EditorModule,
     FormsModule,
     CardModule,
+    FieldsetModule,
   ],
   providers: [LocationsService],
   bootstrap: [AppComponent],

@@ -3,12 +3,13 @@
   icon="pi pi-times"
   iconPos="left"
   styleClass="ui-button-danger"
-  (onClick)="deleteLocation()"
+  (onClick)="showCard()"
 ></p-button>
 
 <p-card
-  header="Advanced Card"
-  subheader="Subheader"
+  *ngIf="card"
+  header="Uwaga!"
+  subheader="Czy napewno chcesz usunąć ten wpis?"
   [style]="{ width: '360px' }"
   styleClass="ui-card-shadow"
 >
@@ -16,18 +17,17 @@
     <!-- <img alt="Card" src="YOUR_IMAGE_PATH"> -->
   </p-header>
   <div style="line-height: 1.5;">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed
-    consequuntur error repudiandae numquam deserunt quisquam repellat libero
-    asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate
-    neque quas!
+    Wybranie opcji usuń trwale usunie ten wpis z bazy.
   </div>
   <p-footer>
     <button
       pButton
       type="button"
-      label="Save"
+      label="Usuń"
       icon="pi pi-check"
       style="margin-right: 0.25em;"
+      (click)="deleteLocation()"
+      [routerLink]="['/locationsList']"
     ></button>
     <button
       pButton
@@ -35,6 +35,7 @@
       label="Cancel"
       icon="pi pi-times"
       class="ui-button-secondary"
+      (click)="hiddenCard()"
     ></button>
   </p-footer>
 </p-card>

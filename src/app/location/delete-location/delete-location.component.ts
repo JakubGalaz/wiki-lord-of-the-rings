@@ -11,14 +11,21 @@ import { Character } from 'src/app/interfaces/Character';
 export class DeleteLocationComponent implements OnInit {
   @Input() location: Location;
 
+  card: boolean;
   constructor(private locationsService: LocationsService) {}
 
   ngOnInit(): void {}
 
   deleteLocation(): void {
-    console.log('deleteLocation()');
     const index = this.locationsService.documents.indexOf(this.location);
-    console.log('index: ' + index);
     this.locationsService.documents.splice(index, 1);
+  }
+
+  showCard(): void {
+    this.card = true;
+  }
+
+  hiddenCard(): void {
+    this.card = false;
   }
 }

@@ -13,6 +13,7 @@ export class LocationComponent implements OnInit, OnDestroy {
   locationsList;
   myLocation;
   myName: string;
+  editedSection: string;
 
   constructor(
     private loacationsService: LocationsService,
@@ -29,6 +30,10 @@ export class LocationComponent implements OnInit, OnDestroy {
   getLocationByID(id: string): void {
     this.myLocation = this.locationsList.find((a) => a.id === id);
     this.myName = this.myLocation.name;
+  }
+
+  editSection(e: string): void {
+    console.log('W głownym komponencie: ' + e);
   }
 
   ngOnDestroy(): void {

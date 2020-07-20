@@ -1,4 +1,7 @@
 <div [innerHTML]="myName"></div>
 <div class="button">
-  <p-button label="Edytuj wpis" styleClass="ui-button-info"></p-button>
+  <app-update-section
+    [section]="myName"
+    (newSection)="sectionUpdate($event)"
+  ></app-update-section>
 </div>

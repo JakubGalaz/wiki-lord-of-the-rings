@@ -1,0 +1,15 @@
+<p-fieldset legend="Edytuj" [toggleable]="true" [collapsed]="true">
+  <p-editor
+    [(ngModel)]="section"
+    [style]="{ height: '320px' }"
+    icon="pi-arrow-down"
+  ></p-editor>
+  <p></p>
+  <p-button
+    label="Zatwierdź zmiany"
+    icon="pi pi-check"
+    iconPos="left"
+    (click)="update()"
+    [routerLink]="['/locationsList']"
+  ></p-button>
+</p-fieldset>
