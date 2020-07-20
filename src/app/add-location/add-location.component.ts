@@ -7,6 +7,7 @@ import {
 } from '@angular/forms';
 import { Location } from '../interfaces/Location';
 import { LocationsService } from '../locations.service';
+import { SelectItem } from 'primeng/api';
 
 @Component({
   selector: 'app-add-location',
@@ -15,6 +16,8 @@ import { LocationsService } from '../locations.service';
 })
 export class AddLocationComponent implements OnInit {
   locationForm: FormGroup;
+
+  locations: SelectItem[];
 
   constructor(
     private fb: FormBuilder,
@@ -50,17 +53,21 @@ export class AddLocationComponent implements OnInit {
           Validators.pattern('[a-zA-Z ]*'),
         ],
       ],
-      locationType: [
-        '',
-        [
-          Validators.required,
-          Validators.minLength(4),
-          Validators.maxLength(15),
-          Validators.pattern('[a-zA-Z ]*'),
-        ],
-      ],
+      locationType: ['', [Validators.required]],
       image: ['', [Validators.required, Validators.minLength(4)]],
     });
+
+    this.locations = [
+      { label: 'Miasto', value: 'Miasto' },
+      { label: 'Wieś', value: 'Wieś' },
+      { label: 'Kraina', value: 'Kraina' },
+      { label: 'Ford', value: 'Ford' },
+      { label: 'Twierza', value: 'Twierdza' },
+      { label: 'Warownia', value: 'Warownia' },
+      { label: 'Zamek', value: 'Zamek' },
+      { label: 'Pałac', value: 'Pałac' },
+      { label: 'Wieża', value: 'Wieża' },
+    ];
   }
 
   get name(): AbstractControl {

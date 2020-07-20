@@ -111,9 +111,9 @@
             <p-message severity="error" text=" Tylko litery!"></p-message>
           </div>
         </div>
-      </div>
 
-      <div class="input-data">
+        <!--    </div>
+        <div class="input-data">
         <span class="ui-float-label">
           <input
             id="locationType"
@@ -151,6 +151,14 @@
           <div *ngIf="locationType.errors.pattern">
             <p-message severity="error" text=" Tylko litery!"></p-message>
           </div>
+        </div> -->
+
+        <div class="input-data">
+          <p>Typ Lokacji:</p>
+          <p-dropdown
+            formControlName="locationType"
+            [options]="locations"
+          ></p-dropdown>
         </div>
 
         <div class="input-data">

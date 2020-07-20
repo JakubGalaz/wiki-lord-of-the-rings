@@ -35,6 +35,7 @@ import { UpdateSectionComponent } from './update-section/update-section.componen
 import { FieldsetModule } from 'primeng/fieldset';
 import { CharacterDeleteComponent } from './character/character-delete/character-delete.component';
 import { SearchComponent } from './search/search.component';
+import { DropdownModule } from 'primeng/dropdown';
 
 @NgModule({
   declarations: [
@@ -75,6 +76,7 @@ import { SearchComponent } from './search/search.component';
     FormsModule,
     CardModule,
     FieldsetModule,
+    DropdownModule,
   ],
   providers: [LocationsService],
   bootstrap: [AppComponent],
