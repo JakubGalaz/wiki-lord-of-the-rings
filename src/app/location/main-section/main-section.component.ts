@@ -14,6 +14,7 @@ export class MainSectionComponent implements OnInit {
   ngOnInit(): void {}
 
   sectionUpdate(e: string): void {
+    console.log('main section update()');
     this.newSection.emit(e);
   }
 }

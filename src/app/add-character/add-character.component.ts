@@ -41,7 +41,7 @@ export class AddCharacterComponent implements OnInit {
         '',
         [
           Validators.required,
-          Validators.minLength(4),
+          Validators.minLength(3),
           Validators.maxLength(15),
           Validators.pattern('[a-zA-Z ]*'),
         ],

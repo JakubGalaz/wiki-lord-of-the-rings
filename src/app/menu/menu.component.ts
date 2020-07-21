@@ -30,8 +30,11 @@ export class MenuComponent implements OnInit {
             label: 'Hobbit',
             command: () => this.toRoute('charactersList/Hobbit'),
           },
-          { label: 'Ork' },
-          { label: 'Inne' },
+          { label: 'Ork', command: () => this.toRoute('charactersList/Ork') },
+          {
+            label: 'Inne',
+            command: () => this.toRoute('charactersList/other'),
+          },
         ],
       },
       {
