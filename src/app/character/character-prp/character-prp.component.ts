@@ -5,10 +5,8 @@ import { Component, OnInit, Input } from '@angular/core';
   templateUrl: './character-prp.component.html',
   styleUrls: ['./character-prp.component.css'],
 })
-export class CharacterPrpComponent implements OnInit {
+export class CharacterPrpComponent {
   @Input() myCharacter: any;
 
   constructor() {}
-
-  ngOnInit(): void {}
 }

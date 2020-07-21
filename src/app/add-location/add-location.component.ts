@@ -117,7 +117,6 @@ export class AddLocationComponent implements OnInit {
       image: this.locationForm.value.image,
     };
 
-    console.log(location);
     return location;
   }
 

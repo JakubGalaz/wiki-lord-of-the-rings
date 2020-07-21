@@ -24,7 +24,6 @@ export class CharacterComponent implements OnInit, OnDestroy {
     this.charactersList = [...this.charactersService.documents];
     this.routeSub = this.route.params.subscribe((params) => {
       this.getCharacterByID(params.id);
-      console.log(this.myCharacter);
     });
   }
 

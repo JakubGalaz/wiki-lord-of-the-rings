@@ -7,13 +7,11 @@ import { Character } from 'src/app/interfaces/Character';
   templateUrl: './character-delete.component.html',
   styleUrls: ['./character-delete.component.css'],
 })
-export class CharacterDeleteComponent implements OnInit {
+export class CharacterDeleteComponent {
   @Input() character: Character;
   card: boolean;
 
   constructor(private charctersServie: CharactersService) {}
-
-  ngOnInit(): void {}
 
   deleteCharacter(): void {
     const index = this.charctersServie.documents.indexOf(this.character);

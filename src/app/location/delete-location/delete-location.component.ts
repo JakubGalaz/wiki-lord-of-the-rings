@@ -8,13 +8,11 @@ import { Character } from 'src/app/interfaces/Character';
   templateUrl: './delete-location.component.html',
   styleUrls: ['./delete-location.component.css'],
 })
-export class DeleteLocationComponent implements OnInit {
+export class DeleteLocationComponent {
   @Input() location: Location;
 
   card: boolean;
   constructor(private locationsService: LocationsService) {}
-
-  ngOnInit(): void {}
 
   deleteLocation(): void {
     const index = this.locationsService.documents.indexOf(this.location);

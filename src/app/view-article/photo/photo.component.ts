@@ -5,10 +5,8 @@ import { Component, OnInit, Input } from '@angular/core';
   templateUrl: './photo.component.html',
   styleUrls: ['./photo.component.css'],
 })
-export class PhotoComponent implements OnInit {
+export class PhotoComponent {
   @Input() image: string;
 
   constructor() {}
-
-  ngOnInit(): void {}
 }

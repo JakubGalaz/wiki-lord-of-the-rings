@@ -10,7 +10,5 @@ export class PropertiesComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit(): void {
-    console.log('mylocation: ' + this.myLocation);
-  }
+  ngOnInit(): void {}
 }

@@ -5,16 +5,13 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   templateUrl: './main-section.component.html',
   styleUrls: ['./main-section.component.css'],
 })
-export class MainSectionComponent implements OnInit {
+export class MainSectionComponent {
   @Input() myName: string;
   @Output() newSection = new EventEmitter<string>();
 
   constructor() {}
 
-  ngOnInit(): void {}
-
   sectionUpdate(e: string): void {
-    console.log('main section update()');
     this.newSection.emit(e);
   }
 }
