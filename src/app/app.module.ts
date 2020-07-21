@@ -36,6 +36,7 @@ import { FieldsetModule } from 'primeng/fieldset';
 import { CharacterDeleteComponent } from './character/character-delete/character-delete.component';
 import { SearchComponent } from './search/search.component';
 import { DropdownModule } from 'primeng/dropdown';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
   declarations: [
@@ -77,6 +78,7 @@ import { DropdownModule } from 'primeng/dropdown';
     CardModule,
     FieldsetModule,
     DropdownModule,
+    Ng2SearchPipeModule,
   ],
   providers: [LocationsService],
   bootstrap: [AppComponent],
