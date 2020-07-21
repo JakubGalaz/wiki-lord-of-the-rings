@@ -94,7 +94,7 @@ export class AddCharacterComponent implements OnInit {
   }
 
   createCharacter(): Character {
-    const today: string = '' + Date.now();
+    const today: Date = new Date();
     const character = {
       id: '22',
       name: this.characterForm.value.name,

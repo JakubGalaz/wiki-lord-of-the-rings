@@ -2,7 +2,7 @@ export class Character {
   id: string;
   name: string;
   section: string;
-  creationDate: string;
+  creationDate: Date;
   race: string;
   names: string;
   weapon: string;
