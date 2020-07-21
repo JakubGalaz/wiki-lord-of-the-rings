@@ -110,6 +110,7 @@ export class AddCharacterComponent implements OnInit {
   }
 
   sectionUpdate(e: string): void {
+    this.buttonDisabled = true;
     this.characterForm.value.section = e;
     if (e.length > 15 && this.characterForm.status === 'VALID') {
       this.buttonDisabled = false;

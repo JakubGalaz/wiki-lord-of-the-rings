@@ -27,7 +27,7 @@ export class AddLocationComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.buttonDisabled = false;
+    this.buttonDisabled = true;
     this.locationForm = this.fb.group({
       name: [
         '',
@@ -58,6 +58,7 @@ export class AddLocationComponent implements OnInit {
       ],
       locationType: ['Miasto', [Validators.required]],
       image: ['', [Validators.required, Validators.minLength(4)]],
+      section: ['opis', Validators.required],
     });
 
     this.locations = [
@@ -116,6 +117,7 @@ export class AddLocationComponent implements OnInit {
   }
 
   sectionUpdate(e: string): void {
+    this.buttonDisabled = true;
     this.locationForm.value.section = e;
     if (e.length > 15 && this.locationForm.status === 'VALID') {
       this.buttonDisabled = false;
