@@ -2,6 +2,6 @@ p-button {
   margin-top: 20px;
 }
 
-.editor {
-  width: 100%;
+p-editor {
+  width: 50px;
 }

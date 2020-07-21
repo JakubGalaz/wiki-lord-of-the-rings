@@ -3,12 +3,12 @@
     legend="Edytuj"
     [toggleable]="true"
     [collapsed]="true"
-    [style]="{ width: '850px' }"
+    [style]="{ maxWidth: '850px' }"
   >
     <p-editor
       [(ngModel)]="section"
       [style]="{ height: '320px' }"
-      [style]="{ width: '850px' }"
+      class="editor"
       icon="pi-arrow-down,"
       (onTextChange)="displayButton()"
     ></p-editor>

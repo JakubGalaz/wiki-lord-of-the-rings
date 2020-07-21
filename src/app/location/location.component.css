@@ -15,8 +15,8 @@
 }
 
 .properties {
-  float: left;
   width: 25%;
+  margin-left: 65%;
 }
 
 .delete {
