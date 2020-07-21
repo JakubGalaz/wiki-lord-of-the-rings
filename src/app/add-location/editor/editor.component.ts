@@ -6,7 +6,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./editor.component.css'],
 })
 export class EditorComponent implements OnInit {
-  text: string;
+  text: 'opis';
   @Output() newSection = new EventEmitter<string>();
   constructor() {}
 

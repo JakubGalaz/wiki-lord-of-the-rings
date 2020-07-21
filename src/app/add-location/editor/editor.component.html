@@ -1,6 +1,8 @@
 <p>Dodawanie opisu:</p>
-<p-editor
-  [(ngModel)]="text"
-  [style]="{ height: '320px' }"
-  (onTextChange)="emit()"
-></p-editor>
+<div class="editor">
+  <p-editor
+    [(ngModel)]="text"
+    [style]="{ height: '320px' }"
+    (onTextChange)="emit()"
+  ></p-editor>
+</div>

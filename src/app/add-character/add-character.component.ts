@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { CharactersService } from './../characters.service';
 import { race } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
@@ -19,7 +20,8 @@ export class AddCharacterComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private charactersService: CharactersService
+    private charactersService: CharactersService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -33,7 +35,7 @@ export class AddCharacterComponent implements OnInit {
           Validators.pattern('[a-zA-Z ]*'),
         ],
       ],
-      section: ['', [Validators.required, Validators.minLength(4)]],
+      section: ['Opis', [Validators.required, Validators.minLength(4)]],
       race: [
         '',
         [
@@ -85,9 +87,9 @@ export class AddCharacterComponent implements OnInit {
   }
 
   addCharacter(): void {
-    console.log('addCharacter');
     const character = this.createCharacter();
     this.charactersService.documents.push(character);
+    this.router.navigateByUrl('/home');
   }
 
   createCharacter(): Character {
@@ -108,5 +110,6 @@ export class AddCharacterComponent implements OnInit {
 
   sectionUpdate(e: string): void {
     this.characterForm.value.section = e;
+    console.log('section update: ' + this.characterForm.value.section);
   }
 }

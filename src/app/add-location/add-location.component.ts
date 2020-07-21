@@ -8,6 +8,7 @@ import {
 import { Location } from '../interfaces/Location';
 import { LocationsService } from '../locations.service';
 import { SelectItem } from 'primeng/api';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-location',
@@ -21,7 +22,8 @@ export class AddLocationComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private locationServie: LocationsService
+    private locationServie: LocationsService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -91,6 +93,7 @@ export class AddLocationComponent implements OnInit {
   addLocation(): void {
     const location = this.createLocation();
     this.locationServie.documents.push(location);
+    this.router.navigateByUrl('/locationsList');
   }
 
   createLocation(): Location {

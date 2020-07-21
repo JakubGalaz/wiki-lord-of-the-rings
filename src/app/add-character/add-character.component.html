@@ -181,13 +181,12 @@
       </div>
 
       <p-button
-        label="Dodaj lokację"
+        label="Dodaj Postać"
         icon="pi pi-check"
         iconPos="left"
         class="button"
-        [disabled]="!characterForm.invalid"
+        [disabled]="characterForm.invalid"
         (onClick)="addCharacter()"
-        [routerLink]="['/home']"
       ></p-button>
       <p></p>
     </form>
