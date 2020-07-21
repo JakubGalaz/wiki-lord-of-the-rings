@@ -9,10 +9,12 @@
       [(ngModel)]="section"
       [style]="{ height: '320px' }"
       [style]="{ width: '850px' }"
-      icon="pi-arrow-down"
+      icon="pi-arrow-down,"
+      (onTextChange)="displayButton()"
     ></p-editor>
     <p></p>
     <p-button
+      [disabled]="disabledButton"
       label="Zatwierdź zmiany"
       icon="pi pi-check"
       iconPos="left"

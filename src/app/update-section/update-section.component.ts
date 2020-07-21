@@ -10,7 +10,10 @@ export class UpdateSectionComponent implements OnInit {
   @Input() section: string;
   @Output() newSection = new EventEmitter<string>();
   display: boolean;
-  constructor() {}
+  disabledButton: boolean;
+  constructor() {
+    this.disabledButton = true;
+  }
 
   ngOnInit(): void {}
 
@@ -20,5 +23,14 @@ export class UpdateSectionComponent implements OnInit {
 
   update(): void {
     this.newSection.emit(this.section);
+  }
+
+  displayButton(): void {
+    this.disabledButton = true;
+
+    if (this.section.length > 8) {
+      console.log('wyswietlanie buttona');
+      this.disabledButton = false;
+    }
   }
 }
