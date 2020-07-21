@@ -1,3 +1,6 @@
+import { MainSectionComponent } from './view-article/main-section/main-section.component';
+import { PhotoComponent } from './view-article/photo/photo.component';
+import { UpdateSectionComponent } from './view-article/update-section/update-section.component';
 import { LocationsService } from './services/locations.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -14,10 +17,7 @@ import { TableModule } from 'primeng/table';
 import { CdkScrollableModule } from '@angular/cdk/scrolling';
 import { LocationComponent } from './location/location.component';
 import { ButtonModule } from 'primeng/button';
-import { MainSectionComponent } from './location/main-section/main-section.component';
 import { PropertiesComponent } from './location/properties/properties.component';
-import { PhotoComponent } from './location/photo/photo.component';
-
 import { AddLocationComponent } from './add-location/add-location.component';
 import { InputTextModule } from 'primeng/inputtext';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -32,7 +32,6 @@ import { CharacterPrpComponent } from './character/character-prp/character-prp.c
 import { AddCharacterComponent } from './add-character/add-character.component';
 import { CardModule } from 'primeng/card';
 import { DeleteLocationComponent } from './location/delete-location/delete-location.component';
-import { UpdateSectionComponent } from './update-section/update-section.component';
 import { FieldsetModule } from 'primeng/fieldset';
 import { CharacterDeleteComponent } from './character/character-delete/character-delete.component';
 import { SearchComponent } from './search/search.component';
