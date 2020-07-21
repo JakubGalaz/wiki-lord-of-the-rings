@@ -101,8 +101,13 @@ export class AddLocationComponent implements OnInit {
   createLocation(): Location {
     const today: Date = new Date();
 
+    const lastIndex = this.locationServie.documents.length - 1;
+    const id = this.locationServie.documents[lastIndex].id;
+    const newID: number = +id + 1;
+    const idString: string = '' + newID;
+
     const location = {
-      id: '21',
+      id: idString,
       name: this.locationForm.value.name,
       section: this.locationForm.value.section,
       creationDate: today,
