@@ -3,12 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Location } from '../interfaces/Location';
 import { Router } from '@angular/router';
 import { CharactersService } from '../services/characters.service';
-
-interface Information {
-  id: string;
-  name: string;
-  typ: string;
-}
+import { Information } from '../interfaces/Information';
 
 @Component({
   selector: 'app-search',
@@ -18,7 +13,6 @@ interface Information {
 export class SearchComponent implements OnInit {
   searchText;
   display: boolean;
-  documents: Location[];
   informations: Information[];
 
   constructor(
@@ -28,20 +22,22 @@ export class SearchComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.informations = [
-      {
-        id: '1',
-        name: 'xd',
-        typ: 'ss',
-      },
-    ];
-
     this.locationsService.documents.forEach((e) => {
+      if (this.informations === undefined) {
+        this.informations = [
+          {
+            id: e.id,
+            name: e.name,
+            typ: 'lokacjach',
+          },
+        ];
+      }
       const item: Information = {
         id: e.id,
         name: e.name,
         typ: 'lokacjach',
       };
+
       this.informations.push(item);
     });
 
@@ -56,7 +52,6 @@ export class SearchComponent implements OnInit {
     });
 
     this.display = false;
-    this.documents = [...this.locationsService.documents];
   }
 
   search(): void {
@@ -72,5 +67,7 @@ export class SearchComponent implements OnInit {
     } else {
       this.router.navigateByUrl('character/' + e.id);
     }
+
+    this.display = false;
   }
 }
