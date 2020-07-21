@@ -20,12 +20,28 @@ export class CharactersListComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.routeSub = this.route.params.subscribe((params) => {
-      const seletedCharacters = [
-        ...this.charactersService.documents.filter(
-          (e) => e.race === params.type
-        ),
-      ];
-      this.documents = [...seletedCharacters];
+      if (params.type !== 'other') {
+        const seletedCharacters = [
+          ...this.charactersService.documents.filter(
+            (e) => e.race === params.type
+          ),
+        ];
+
+        this.documents = [...seletedCharacters];
+      } else {
+        const seletedCharacters = [
+          ...this.charactersService.documents.filter(
+            (e) =>
+              e.race !== 'Ork' &&
+              e.race !== 'Człowiek' &&
+              e.race !== 'Elf' &&
+              e.race !== 'Krasnolud' &&
+              e.race !== 'Hobbit'
+          ),
+        ];
+
+        this.documents = [...seletedCharacters];
+      }
     });
   }
 
