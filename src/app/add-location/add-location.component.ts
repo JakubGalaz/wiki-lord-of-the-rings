@@ -53,7 +53,7 @@ export class AddLocationComponent implements OnInit {
           Validators.pattern('[a-zA-Z ]*'),
         ],
       ],
-      locationType: ['', [Validators.required]],
+      locationType: ['Miasto', [Validators.required]],
       image: ['', [Validators.required, Validators.minLength(4)]],
     });
 
@@ -61,7 +61,6 @@ export class AddLocationComponent implements OnInit {
       { label: 'Miasto', value: 'Miasto' },
       { label: 'Wieś', value: 'Wieś' },
       { label: 'Kraina', value: 'Kraina' },
-      { label: 'Ford', value: 'Ford' },
       { label: 'Twierza', value: 'Twierdza' },
       { label: 'Warownia', value: 'Warownia' },
       { label: 'Zamek', value: 'Zamek' },
