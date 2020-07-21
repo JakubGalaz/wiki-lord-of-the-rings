@@ -1,6 +1,5 @@
 import { Router } from '@angular/router';
 import { CharactersService } from './../characters.service';
-import { race } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
 import {
   Validators,
@@ -17,7 +16,7 @@ import { Character } from '../interfaces/Character';
 })
 export class AddCharacterComponent implements OnInit {
   characterForm: FormGroup;
-
+  buttonDisabled: boolean;
   constructor(
     private fb: FormBuilder,
     private charactersService: CharactersService,
@@ -25,6 +24,8 @@ export class AddCharacterComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    this.buttonDisabled = true;
+
     this.characterForm = this.fb.group({
       name: [
         '',
@@ -35,7 +36,7 @@ export class AddCharacterComponent implements OnInit {
           Validators.pattern('[a-zA-Z ]*'),
         ],
       ],
-      section: ['Opis', [Validators.required, Validators.minLength(4)]],
+      section: ['opis', [Validators.required, Validators.minLength(4)]],
       race: [
         '',
         [
@@ -63,7 +64,7 @@ export class AddCharacterComponent implements OnInit {
           Validators.pattern('[a-zA-Z ]*'),
         ],
       ],
-      image: ['', [Validators.required, Validators.minLength(4)]],
+      image: ['', [Validators.required, Validators.minLength(10)]],
     });
   }
 
@@ -110,6 +111,8 @@ export class AddCharacterComponent implements OnInit {
 
   sectionUpdate(e: string): void {
     this.characterForm.value.section = e;
-    console.log('section update: ' + this.characterForm.value.section);
+    if (e.length > 15 && this.characterForm.status === 'VALID') {
+      this.buttonDisabled = false;
+    }
   }
 }

@@ -10,18 +10,15 @@ export class UpdateSectionComponent implements OnInit {
   @Input() section: string;
   @Output() newSection = new EventEmitter<string>();
   display: boolean;
-  constructor(private locationsService: LocationsService) {}
+  constructor() {}
 
-  ngOnInit(): void {
-    console.log('sekcja ktora przyszla do update secion: ' + this.section);
-  }
+  ngOnInit(): void {}
 
   showEditor(): void {
     this.display = !this.display;
   }
 
   update(): void {
-    console.log('new serction z update section: ' + this.section);
     this.newSection.emit(this.section);
   }
 }

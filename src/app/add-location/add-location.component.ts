@@ -17,7 +17,7 @@ import { Router } from '@angular/router';
 })
 export class AddLocationComponent implements OnInit {
   locationForm: FormGroup;
-
+  buttonDisabled: boolean;
   locations: SelectItem[];
 
   constructor(
@@ -27,6 +27,7 @@ export class AddLocationComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    this.buttonDisabled = false;
     this.locationForm = this.fb.group({
       name: [
         '',
@@ -115,5 +116,8 @@ export class AddLocationComponent implements OnInit {
 
   sectionUpdate(e: string): void {
     this.locationForm.value.section = e;
+    if (e.length > 15 && this.locationForm.status === 'VALID') {
+      this.buttonDisabled = false;
+    }
   }
 }

@@ -1,4 +1,10 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  Output,
+  EventEmitter,
+  AfterViewInit,
+} from '@angular/core';
 
 @Component({
   selector: 'app-editor',
@@ -6,11 +12,13 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./editor.component.css'],
 })
 export class EditorComponent implements OnInit {
-  text: 'opis';
+  text: string;
   @Output() newSection = new EventEmitter<string>();
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.text = 'opis';
+  }
 
   emit(): void {
     this.newSection.emit(this.text);
