@@ -1,3 +1,4 @@
+import { LocationsService } from './services/locations.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -16,7 +17,7 @@ import { ButtonModule } from 'primeng/button';
 import { MainSectionComponent } from './location/main-section/main-section.component';
 import { PropertiesComponent } from './location/properties/properties.component';
 import { PhotoComponent } from './location/photo/photo.component';
-import { LocationsService } from './locations.service';
+
 import { AddLocationComponent } from './add-location/add-location.component';
 import { InputTextModule } from 'primeng/inputtext';
 import { ReactiveFormsModule } from '@angular/forms';

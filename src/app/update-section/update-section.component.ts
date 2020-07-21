@@ -1,4 +1,3 @@
-import { LocationsService } from './../locations.service';
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({

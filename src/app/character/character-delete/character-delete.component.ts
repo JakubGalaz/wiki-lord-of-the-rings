@@ -1,4 +1,4 @@
-import { CharactersService } from './../../characters.service';
+import { CharactersService } from './../../services/characters.service';
 import { Component, OnInit, Input } from '@angular/core';
 import { Character } from 'src/app/interfaces/Character';
 

@@ -1,6 +1,6 @@
 import { Character } from './../interfaces/Character';
 import { ActivatedRoute } from '@angular/router';
-import { CharactersService } from './../characters.service';
+import { CharactersService } from './../services/characters.service';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
 

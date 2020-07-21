@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LocationsService } from '../locations.service';
+import { LocationsService } from '../services/locations.service';
 
 interface Location {
   id: string;

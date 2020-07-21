@@ -1,5 +1,5 @@
 import { Router } from '@angular/router';
-import { CharactersService } from './../characters.service';
+import { CharactersService } from './../services/characters.service';
 import { Component, OnInit } from '@angular/core';
 import {
   Validators,

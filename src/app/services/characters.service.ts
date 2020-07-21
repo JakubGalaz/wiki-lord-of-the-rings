@@ -1,21 +1,10 @@
-import { Article } from './interfaces/Article';
 import { Injectable } from '@angular/core';
-import { Character } from './interfaces/Character';
+import { Character } from '../interfaces/Character';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CharactersService {
-  articlee: Article[] = [
-    {
-      id: '1',
-      section: 'Jakas informacja',
-      creationData: '12/11/2010',
-      gruopId: '1',
-      type: '1',
-    },
-  ];
-
   documents: Character[] = [
     {
       id: '1',

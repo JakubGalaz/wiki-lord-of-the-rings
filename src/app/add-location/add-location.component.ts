@@ -6,7 +6,7 @@ import {
   AbstractControl,
 } from '@angular/forms';
 import { Location } from '../interfaces/Location';
-import { LocationsService } from '../locations.service';
+import { LocationsService } from '../services/locations.service';
 import { SelectItem } from 'primeng/api';
 import { Router } from '@angular/router';
 

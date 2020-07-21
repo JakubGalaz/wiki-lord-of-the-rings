@@ -1,4 +1,4 @@
-import { LocationsService } from './../../locations.service';
+import { LocationsService } from './../../services/locations.service';
 import { Component, OnInit, Input } from '@angular/core';
 import { Location } from '../../interfaces/Location';
 import { Character } from 'src/app/interfaces/Character';
