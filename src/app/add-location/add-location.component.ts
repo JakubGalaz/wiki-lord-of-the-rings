@@ -98,7 +98,7 @@ export class AddLocationComponent implements OnInit {
   }
 
   createLocation(): Location {
-    const today: string = '' + Date.now();
+    const today: Date = new Date();
 
     const location = {
       id: '21',
@@ -111,6 +111,7 @@ export class AddLocationComponent implements OnInit {
       image: this.locationForm.value.image,
     };
 
+    console.log(location);
     return location;
   }
 
