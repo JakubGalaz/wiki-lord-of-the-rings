@@ -57,6 +57,7 @@ export class MenuComponent implements OnInit {
       },
       {
         label: 'O nas',
+        command: () => this.toRoute('websiteDescription'),
       },
     ];
   }

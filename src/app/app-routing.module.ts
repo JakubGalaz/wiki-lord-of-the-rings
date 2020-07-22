@@ -1,3 +1,4 @@
+import { WebsiteDescComponent } from './website-desc/website-desc.component';
 import { AddCharacterComponent } from './add-character/add-character.component';
 import { CharacterComponent } from './character/character.component';
 import { NgModule } from '@angular/core';
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'charactersList/:type', component: CharactersListComponent },
   { path: 'character/:id', component: CharacterComponent },
   { path: 'addCharacter', component: AddCharacterComponent },
+  { path: 'websiteDescription', component: WebsiteDescComponent },
   { path: '**', component: NotFoundComponent },
 ];
 

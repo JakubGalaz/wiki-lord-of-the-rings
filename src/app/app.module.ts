@@ -37,6 +37,7 @@ import { CharacterDeleteComponent } from './character/character-delete/character
 import { SearchComponent } from './search/search.component';
 import { DropdownModule } from 'primeng/dropdown';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { WebsiteDescComponent } from './website-desc/website-desc.component';
 
 @NgModule({
   declarations: [
@@ -59,6 +60,7 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     UpdateSectionComponent,
     CharacterDeleteComponent,
     SearchComponent,
+    WebsiteDescComponent,
   ],
   imports: [
     BrowserModule,
