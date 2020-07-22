@@ -14,8 +14,7 @@ export class DeleteLocationComponent {
   constructor(private locationsService: LocationsService) {}
 
   deleteLocation(): void {
-    const index = this.locationsService.documents.indexOf(this.location);
-    this.locationsService.documents.splice(index, 1);
+    this.locationsService.deleteLocation(this.location);
   }
 
   showCard(): void {

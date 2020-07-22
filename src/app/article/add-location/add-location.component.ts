@@ -94,7 +94,7 @@ export class AddLocationComponent implements OnInit {
 
   addLocation(): void {
     const location = this.createLocation();
-    this.locationServie.documents.push(location);
+    this.locationServie.postLocation(location);
     this.router.navigateByUrl('/locationsList');
   }
 

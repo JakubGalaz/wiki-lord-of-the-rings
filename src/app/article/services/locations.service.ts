@@ -144,4 +144,19 @@ export class LocationsService {
       },
     ];
   }
+
+  postLocation(location: Location): void {
+    this.documents.push(location);
+  }
+
+  putLocation(location: Location, section: string): void {
+    const index = this.documents.indexOf(location);
+    location.section = section;
+    this.documents[index] = location;
+  }
+
+  deleteLocation(location: Location): void {
+    const index = this.documents.indexOf(location);
+    this.documents.splice(index, 1);
+  }
 }

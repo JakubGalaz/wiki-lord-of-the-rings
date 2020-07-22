@@ -34,9 +34,7 @@ export class LocationComponent implements OnInit, OnDestroy {
   }
 
   editSection(e: string): void {
-    const index = this.loacationsService.documents.indexOf(this.myLocation);
-    this.myLocation.section = e;
-    this.loacationsService.documents[index] = this.myLocation;
+    this.loacationsService.putLocation(this.myLocation, e);
   }
 
   ngOnDestroy(): void {
