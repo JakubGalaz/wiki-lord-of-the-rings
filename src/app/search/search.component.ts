@@ -1,9 +1,8 @@
-import { LocationsService } from './../services/locations.service';
+import { LocationsService } from '.././article/services/locations.service';
 import { Component, OnInit } from '@angular/core';
-import { Location } from '../interfaces/Location';
 import { Router } from '@angular/router';
-import { CharactersService } from '../services/characters.service';
-import { Information } from '../interfaces/Information';
+import { CharactersService } from '.././article/services/characters.service';
+import { Information } from '.././article/interfaces/Information';
 
 @Component({
   selector: 'app-search',

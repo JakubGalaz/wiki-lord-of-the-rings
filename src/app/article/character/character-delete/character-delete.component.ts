@@ -1,6 +1,6 @@
 import { CharactersService } from './../../services/characters.service';
 import { Component, OnInit, Input } from '@angular/core';
-import { Character } from 'src/app/interfaces/Character';
+import { Character } from '../../interfaces/Character';
 
 @Component({
   selector: 'app-character-delete',

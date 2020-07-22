@@ -1,14 +1,14 @@
 import { WebsiteDescComponent } from './website-desc/website-desc.component';
-import { AddCharacterComponent } from './add-character/add-character.component';
-import { CharacterComponent } from './character/character.component';
+import { AddCharacterComponent } from './article/add-character/add-character.component';
+import { CharacterComponent } from './article/character/character.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HomeComponent } from './home/home.component';
+import { HomeComponent } from './article/home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { LocationsListComponent } from './locations-list/locations-list.component';
-import { LocationComponent } from './location/location.component';
-import { AddLocationComponent } from './add-location/add-location.component';
-import { CharactersListComponent } from './characters-list/characters-list.component';
+import { LocationsListComponent } from './article/locations-list/locations-list.component';
+import { LocationComponent } from './article/location/location.component';
+import { AddLocationComponent } from './article/add-location/add-location.component';
+import { CharactersListComponent } from './article/characters-list/characters-list.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
