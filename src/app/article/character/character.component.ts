@@ -33,9 +33,7 @@ export class CharacterComponent implements OnInit, OnDestroy {
   }
 
   editSection(e: string): void {
-    const index = this.charactersService.documents.indexOf(this.myCharacter);
-    this.myCharacter.section = e;
-    this.charactersService.documents[index] = this.myCharacter;
+    this.charactersService.putCharacter(this.myCharacter, e);
   }
 
   ngOnDestroy(): void {

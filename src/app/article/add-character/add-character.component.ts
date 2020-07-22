@@ -89,7 +89,7 @@ export class AddCharacterComponent implements OnInit {
 
   addCharacter(): void {
     const character = this.createCharacter();
-    this.charactersService.documents.push(character);
+    this.charactersService.postCharacter(character);
     this.router.navigateByUrl('/home');
   }
 

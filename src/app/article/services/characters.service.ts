@@ -42,4 +42,19 @@ export class CharactersService {
   ];
 
   constructor() {}
+
+  postCharacter(character: Character): void {
+    this.documents.push(character);
+  }
+
+  putCharacter(character: Character, section: string): void {
+    const index = this.documents.indexOf(character);
+    character.section = section;
+    this.documents[index] = character;
+  }
+
+  deleteCharacter(character: Character): void {
+    const index = this.documents.indexOf(character);
+    this.documents.splice(index, 1);
+  }
 }

@@ -14,8 +14,7 @@ export class CharacterDeleteComponent {
   constructor(private charctersServie: CharactersService) {}
 
   deleteCharacter(): void {
-    const index = this.charctersServie.documents.indexOf(this.character);
-    this.charctersServie.documents.splice(index, 1);
+    this.charctersServie.deleteCharacter(this.character);
   }
 
   showCard(): void {
