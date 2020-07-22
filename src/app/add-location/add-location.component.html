@@ -64,9 +64,9 @@
           <div *ngIf="position.errors.maxlength">
             <p-message
               severity="error"
-              text=" Minimum {{
+              text=" Maksiumum {{
                 position.errors.maxlength.requiredLength
-              }} znaki"
+              }} znaków"
             ></p-message>
           </div>
           <div *ngIf="position.errors.pattern">
@@ -102,7 +102,7 @@
           <div *ngIf="residents.errors.maxlength">
             <p-message
               severity="error"
-              text=" Minimum {{
+              text=" Maksiumum {{
                 residents.errors.maxlength.requiredLength
               }} znaki"
             ></p-message>
@@ -111,47 +111,6 @@
             <p-message severity="error" text=" Tylko litery!"></p-message>
           </div>
         </div>
-
-        <!--    </div>
-        <div class="input-data">
-        <span class="ui-float-label">
-          <input
-            id="locationType"
-            type="text"
-            size="30"
-            formControlName="locationType"
-            pInputText
-          />
-          <label for="locationType">Typ lokacji</label>
-        </span>
-
-        <div
-          *ngIf="locationType.touched && locationType.invalid"
-          class="warring"
-        >
-          <div *ngIf="locationType.errors.required">
-            <p-message severity="error" text="Pole jest wymagane!"></p-message>
-          </div>
-          <div *ngIf="locationType.errors.minlength">
-            <p-message
-              severity="error"
-              text=" Minimum {{
-                locationType.errors.minlength.requiredLength
-              }} znaki"
-            ></p-message>
-          </div>
-          <div *ngIf="locationType.errors.maxlength">
-            <p-message
-              severity="error"
-              text=" Minimum {{
-                locationType.errors.maxlength.requiredLength
-              }} znaki"
-            ></p-message>
-          </div>
-          <div *ngIf="locationType.errors.pattern">
-            <p-message severity="error" text=" Tylko litery!"></p-message>
-          </div>
-        </div> -->
 
         <div class="input-data">
           <p>Typ Lokacji:</p>

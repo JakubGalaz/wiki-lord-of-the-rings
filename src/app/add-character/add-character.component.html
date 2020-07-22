@@ -28,7 +28,9 @@
           <div *ngIf="name.errors.maxlength">
             <p-message
               severity="error"
-              text=" Minimum {{ name.errors.maxlength.requiredLength }} znaków"
+              text=" Maksiumum {{
+                name.errors.maxlength.requiredLength
+              }} znaków"
             ></p-message>
           </div>
           <div *ngIf="name.errors.pattern">
@@ -61,7 +63,7 @@
             <div *ngIf="race.errors.maxlength">
               <p-message
                 severity="error"
-                text=" Minimum {{
+                text=" Maksiumum {{
                   race.errors.maxlength.requiredLength
                 }} znaków"
               ></p-message>
@@ -99,7 +101,7 @@
             <div *ngIf="names.errors.maxlength">
               <p-message
                 severity="error"
-                text=" Minimum {{
+                text=" Maksiumum {{
                   names.errors.maxlength.requiredLength
                 }} znaków"
               ></p-message>
@@ -137,7 +139,7 @@
             <div *ngIf="weapon.errors.maxlength">
               <p-message
                 severity="error"
-                text=" Minimum {{
+                text=" Maksiumum {{
                   weapon.errors.maxlength.requiredLength
                 }} znaków"
               ></p-message>
