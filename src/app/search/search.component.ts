@@ -41,7 +41,6 @@ export class SearchComponent implements OnInit {
       };
       this.informations.push(item);
     });
-    console.log('ngoninit w search' + this.informations);
 
     this.characterService.documents.forEach((e) => {
       const item: Information = {

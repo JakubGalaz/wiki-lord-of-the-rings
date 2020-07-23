@@ -109,7 +109,6 @@ export class AddCharacterComponent implements OnInit {
       image: this.characterForm.value.image,
     };
 
-    console.log(character);
     return character;
   }
 
