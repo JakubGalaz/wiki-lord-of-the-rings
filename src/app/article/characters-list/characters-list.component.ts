@@ -12,6 +12,7 @@ import { ActivatedRoute } from '@angular/router';
 export class CharactersListComponent implements OnInit, OnDestroy {
   documents: Character[];
   private routeSub: Subscription;
+  private documentSub: Subscription;
 
   constructor(
     private charactersService: CharactersService,
@@ -19,6 +20,11 @@ export class CharactersListComponent implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit(): void {
+    this.documentSub = this.charactersService.getJSON().subscribe(
+      (data) => (this.documents = data),
+      (error) => console.error(error)
+    );
+
     this.routeSub = this.route.params.subscribe((params) => {
       if (params.type !== 'other') {
         const seletedCharacters = [

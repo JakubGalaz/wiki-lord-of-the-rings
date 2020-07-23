@@ -1,3 +1,4 @@
+import { CreationIDService } from './../../identity/creation-id.service';
 import { Component, OnInit } from '@angular/core';
 import {
   FormGroup,
@@ -23,7 +24,8 @@ export class AddLocationComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private locationServie: LocationsService,
-    private router: Router
+    private router: Router,
+    private creationIDService: CreationIDService
   ) {}
 
   ngOnInit(): void {
@@ -101,13 +103,10 @@ export class AddLocationComponent implements OnInit {
   createLocation(): Location {
     const today: Date = new Date();
 
-    const lastIndex = this.locationServie.documents.length - 1;
-    const id = this.locationServie.documents[lastIndex].id;
-    const newID: number = +id + 1;
-    const idString: string = '' + newID;
+    const generateID = this.creationIDService.getID();
 
     const location = {
-      id: idString,
+      id: generateID,
       name: this.locationForm.value.name,
       section: this.locationForm.value.section,
       creationDate: today,

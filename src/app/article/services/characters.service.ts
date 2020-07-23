@@ -6,15 +6,10 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root',
 })
-export class CharactersService implements OnDestroy {
+export class CharactersService {
   documents: Character[];
-  sub: Subscription;
 
-  constructor(private http: HttpClient) {
-    this.sub = this.getJSON().subscribe((data) => {
-      this.documents = data;
-    });
-  }
+  constructor(private http: HttpClient) {}
 
   public getJSON(): Observable<any> {
     return this.http.get('../../../assets/characters.json');
@@ -33,9 +28,5 @@ export class CharactersService implements OnDestroy {
   deleteCharacter(character: Character): void {
     const index = this.documents.indexOf(character);
     this.documents.splice(index, 1);
-  }
-
-  ngOnDestroy(): void {
-    this.sub.unsubscribe();
   }
 }
