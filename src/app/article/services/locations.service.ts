@@ -11,7 +11,6 @@ export class LocationsService implements OnDestroy {
   sub: Subscription;
 
   constructor(private http: HttpClient) {
-    console.log('konstruktor lokacji');
     this.sub = this.getJSON().subscribe(
       (data) => {
         this.documents = data;
