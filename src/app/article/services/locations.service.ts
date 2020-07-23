@@ -12,9 +12,12 @@ export class LocationsService implements OnDestroy {
 
   constructor(private http: HttpClient) {
     console.log('konstruktor lokacji');
-    this.sub = this.getJSON().subscribe((data) => {
-      this.documents = data;
-    });
+    this.sub = this.getJSON().subscribe(
+      (data) => {
+        this.documents = data;
+      },
+      (error) => console.log(error)
+    );
   }
 
   public getJSON(): Observable<any> {

@@ -1,5 +1,5 @@
 import { LocationsService } from '.././article/services/locations.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, IterableDiffers } from '@angular/core';
 import { Router } from '@angular/router';
 import { CharactersService } from '.././article/services/characters.service';
 import { Information } from '.././article/interfaces/Information';
@@ -20,7 +20,10 @@ export class SearchComponent implements OnInit {
     private router: Router
   ) {}
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  clickOnInput(): void {
+    this.informations = undefined;
     this.locationsService.documents.forEach((e) => {
       if (this.informations === undefined) {
         this.informations = [
@@ -36,9 +39,9 @@ export class SearchComponent implements OnInit {
         name: e.name,
         typ: 'lokacjach',
       };
-
       this.informations.push(item);
     });
+    console.log('ngoninit w search' + this.informations);
 
     this.characterService.documents.forEach((e) => {
       const item: Information = {

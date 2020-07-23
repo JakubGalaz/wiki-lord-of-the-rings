@@ -1,3 +1,4 @@
+import { CharactersService } from './services/characters.service';
 import { IdentityModule } from './../identity/identity.module';
 import { SharedModule } from './../shared/shared.module';
 import { NgModule } from '@angular/core';
@@ -63,6 +64,6 @@ import { HttpClientModule } from '@angular/common/http';
     PhotoComponent,
     UpdateSectionComponent,
   ],
-  providers: [LocationsService],
+  providers: [LocationsService, CharactersService],
 })
 export class ArticleModule {}
