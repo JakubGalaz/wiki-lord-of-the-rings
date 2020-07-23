@@ -4,7 +4,7 @@ import { Pipe, PipeTransform } from '@angular/core';
   name: 'datePl',
 })
 export class DatePlPipe implements PipeTransform {
-  transform(date: Date, ...args: unknown[]): unknown {
+  transform(date: Date): string {
     const strDate = '' + date;
     const month = strDate.substring(4, 7);
     let day = strDate.substring(8, 10);
