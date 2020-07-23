@@ -33,13 +33,14 @@ export class SearchComponent implements OnInit {
             typ: 'lokacjach',
           },
         ];
+      } else {
+        const item: Information = {
+          id: e.id,
+          name: e.name,
+          typ: 'lokacjach',
+        };
+        this.informations.push(item);
       }
-      const item: Information = {
-        id: e.id,
-        name: e.name,
-        typ: 'lokacjach',
-      };
-      this.informations.push(item);
     });
 
     this.characterService.documents.forEach((e) => {
@@ -63,6 +64,7 @@ export class SearchComponent implements OnInit {
   }
 
   routeTo(e: Information): void {
+    this.searchText = '';
     if (e.typ === 'lokacjach') {
       this.router.navigateByUrl('location/' + e.id);
     } else {

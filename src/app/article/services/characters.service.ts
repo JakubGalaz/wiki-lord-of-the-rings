@@ -15,7 +15,7 @@ export class CharactersService implements OnDestroy {
       (data) => {
         this.documents = data;
       },
-      (error) => console.log(console.error())
+      (error) => console.log(error())
     );
   }
 
