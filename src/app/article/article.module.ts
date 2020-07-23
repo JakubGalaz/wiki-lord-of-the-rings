@@ -21,6 +21,7 @@ import { PhotoComponent } from './view-article/photo/photo.component';
 import { UpdateSectionComponent } from './view-article/update-section/update-section.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { DatePlPipe } from './date-pl.pipe';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { HttpClientModule } from '@angular/common/http';
     MainSectionComponent,
     PhotoComponent,
     UpdateSectionComponent,
+    DatePlPipe,
   ],
   imports: [
     CommonModule,

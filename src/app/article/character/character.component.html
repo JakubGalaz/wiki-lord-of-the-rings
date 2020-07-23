@@ -16,7 +16,9 @@
     </div>
     <div class="property">
       <app-character-prp [myCharacter]="myCharacter"></app-character-prp> >
-      <div>Data utworznia artykułu: {{ myCharacter.creationDate | date }}</div>
+      <div>
+        Data utworznia artykułu: {{ myCharacter.creationDate | datePl }}
+      </div>
     </div>
   </div>
 </div>
