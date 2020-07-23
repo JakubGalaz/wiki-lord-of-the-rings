@@ -17,10 +17,60 @@
     "race": "Ainur",
     "names": "Mithrandir",
     "weapon": "Glamdring",
-    "image": "https://live.staticflickr.com/8094/8566657317_17395cdc4a_b.jpg"
+    "image": "https://upload.wikimedia.org/wikipedia/commons/1/19/DSC09942_-_Gandalf_%2837033407776%29.jpg"
   },
   {
     "id": "3",
+    "name": "Samwise Gamgee",
+    "section": "Lorem ipsum dolor sit amet, <p> consectetur  </p> adipiscing elit. Proin nibh augue, suscipit a, scelerisque sed, lacinia in, mi. Cras vel lorem. Etiam pellentesque aliquet tellus. Phasellus pharetra nulla ac diam. Quisque semper justo at risus. Donec venenatis, turpis vel hendrerit interdum, dui ligula ultricies purus, sed posuere libero dui id orci. Nam congue, pede vitae dapibus aliquet, elit magna vulputate arcu, vel tempus metus leo non est. Etiam sit amet lectus quis est congue mollis. Phasellus congue lacus eget neque. Phasellus ornare, ante vitae consectetuer consequat, purus sapien ultricies dolor, et mollis pede metus eget nisi. Praesent sodales velit quis augue. Cras suscipit, urna at aliquam rhoncus, urna quam viverra nisi, in interdum massa nibh nec erat.",
+    "creationDate": "2014-01-01T23:28:56.782Z",
+    "race": "Hobbit",
+    "names": "Samwise mężny",
+    "weapon": "Miecz z Kurhanów",
+    "image": "https://live.staticflickr.com/8348/8259467739_a230764e05_b.jpg"
+  },
+  {
+    "id": "4",
+    "name": "Legolas",
+    "section": "Lorem ipsum dolor sit amet, <p> consectetur  </p> adipiscing elit. Proin nibh augue, suscipit a, scelerisque sed, lacinia in, mi. Cras vel lorem. Etiam pellentesque aliquet tellus. Phasellus pharetra nulla ac diam. Quisque semper justo at risus. Donec venenatis, turpis vel hendrerit interdum, dui ligula ultricies purus, sed posuere libero dui id orci. Nam congue, pede vitae dapibus aliquet, elit magna vulputate arcu, vel tempus metus leo non est. Etiam sit amet lectus quis est congue mollis. Phasellus congue lacus eget neque. Phasellus ornare, ante vitae consectetuer consequat, purus sapien ultricies dolor, et mollis pede metus eget nisi. Praesent sodales velit quis augue. Cras suscipit, urna at aliquam rhoncus, urna quam viverra nisi, in interdum massa nibh nec erat.",
+    "creationDate": "2014-01-01T23:28:56.782Z",
+    "race": "Elf",
+    "names": "Zielony Liść",
+    "weapon": "Łuk",
+    "image": "https://live.staticflickr.com/8094/8566657317_17395cdc4a_b.jpg"
+  },
+  {
+    "id": "5",
+    "name": "Samwise Gamgee",
+    "section": "Lorem ipsum dolor sit amet, <p> consectetur  </p> adipiscing elit. Proin nibh augue, suscipit a, scelerisque sed, lacinia in, mi. Cras vel lorem. Etiam pellentesque aliquet tellus. Phasellus pharetra nulla ac diam. Quisque semper justo at risus. Donec venenatis, turpis vel hendrerit interdum, dui ligula ultricies purus, sed posuere libero dui id orci. Nam congue, pede vitae dapibus aliquet, elit magna vulputate arcu, vel tempus metus leo non est. Etiam sit amet lectus quis est congue mollis. Phasellus congue lacus eget neque. Phasellus ornare, ante vitae consectetuer consequat, purus sapien ultricies dolor, et mollis pede metus eget nisi. Praesent sodales velit quis augue. Cras suscipit, urna at aliquam rhoncus, urna quam viverra nisi, in interdum massa nibh nec erat.",
+    "creationDate": "2014-01-01T23:28:56.782Z",
+    "race": "Hobbit",
+    "names": "Samwise mężny",
+    "weapon": "Miecz z Kurhanów",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Legolas_Greenleaf_by_Benjamin_Drake.png/347px-Legolas_Greenleaf_by_Benjamin_Drake.png"
+  },
+  {
+    "id": "6",
+    "name": "Samwise Gamgee",
+    "section": "Lorem ipsum dolor sit amet, <p> consectetur  </p> adipiscing elit. Proin nibh augue, suscipit a, scelerisque sed, lacinia in, mi. Cras vel lorem. Etiam pellentesque aliquet tellus. Phasellus pharetra nulla ac diam. Quisque semper justo at risus. Donec venenatis, turpis vel hendrerit interdum, dui ligula ultricies purus, sed posuere libero dui id orci. Nam congue, pede vitae dapibus aliquet, elit magna vulputate arcu, vel tempus metus leo non est. Etiam sit amet lectus quis est congue mollis. Phasellus congue lacus eget neque. Phasellus ornare, ante vitae consectetuer consequat, purus sapien ultricies dolor, et mollis pede metus eget nisi. Praesent sodales velit quis augue. Cras suscipit, urna at aliquam rhoncus, urna quam viverra nisi, in interdum massa nibh nec erat.",
+    "creationDate": "2014-01-01T23:28:56.782Z",
+    "race": "Hobbit",
+    "names": "Samwise mężny",
+    "weapon": "Miecz z Kurhanów",
+    "image": "https://live.staticflickr.com/8094/8566657317_17395cdc4a_b.jpg"
+  },
+  {
+    "id": "7",
+    "name": "Azog",
+    "section": "Lorem ipsum dolor sit amet, <p> consectetur  </p> adipiscing elit. Proin nibh augue, suscipit a, scelerisque sed, lacinia in, mi. Cras vel lorem. Etiam pellentesque aliquet tellus. Phasellus pharetra nulla ac diam. Quisque semper justo at risus. Donec venenatis, turpis vel hendrerit interdum, dui ligula ultricies purus, sed posuere libero dui id orci. Nam congue, pede vitae dapibus aliquet, elit magna vulputate arcu, vel tempus metus leo non est. Etiam sit amet lectus quis est congue mollis. Phasellus congue lacus eget neque. Phasellus ornare, ante vitae consectetuer consequat, purus sapien ultricies dolor, et mollis pede metus eget nisi. Praesent sodales velit quis augue. Cras suscipit, urna at aliquam rhoncus, urna quam viverra nisi, in interdum massa nibh nec erat.",
+    "creationDate": "2014-01-01T23:28:56.782Z",
+    "race": "Ork",
+    "names": "Azog plugawyy",
+    "weapon": "Buzdygan",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/0/06/Ork_schamane.jpg"
+  },
+  {
+    "id": "8",
     "name": "Samwise Gamgee",
     "section": "Lorem ipsum dolor sit amet, <p> consectetur  </p> adipiscing elit. Proin nibh augue, suscipit a, scelerisque sed, lacinia in, mi. Cras vel lorem. Etiam pellentesque aliquet tellus. Phasellus pharetra nulla ac diam. Quisque semper justo at risus. Donec venenatis, turpis vel hendrerit interdum, dui ligula ultricies purus, sed posuere libero dui id orci. Nam congue, pede vitae dapibus aliquet, elit magna vulputate arcu, vel tempus metus leo non est. Etiam sit amet lectus quis est congue mollis. Phasellus congue lacus eget neque. Phasellus ornare, ante vitae consectetuer consequat, purus sapien ultricies dolor, et mollis pede metus eget nisi. Praesent sodales velit quis augue. Cras suscipit, urna at aliquam rhoncus, urna quam viverra nisi, in interdum massa nibh nec erat.",
     "creationDate": "2014-01-01T23:28:56.782Z",
