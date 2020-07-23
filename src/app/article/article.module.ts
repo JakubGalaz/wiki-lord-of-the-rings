@@ -21,6 +21,7 @@ import { PhotoComponent } from './view-article/photo/photo.component';
 import { UpdateSectionComponent } from './view-article/update-section/update-section.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     LocationsListComponent,
