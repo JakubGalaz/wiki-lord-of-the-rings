@@ -1,3 +1,4 @@
+import { IdentityModule } from './../identity/identity.module';
 import { SharedModule } from './../shared/shared.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -18,7 +19,7 @@ import { MainSectionComponent } from './view-article/main-section/main-section.c
 import { PhotoComponent } from './view-article/photo/photo.component';
 import { UpdateSectionComponent } from './view-article/update-section/update-section.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     LocationsListComponent,
@@ -37,7 +38,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     PhotoComponent,
     UpdateSectionComponent,
   ],
-  imports: [CommonModule, SharedModule, FormsModule, ReactiveFormsModule],
+  imports: [
+    CommonModule,
+    SharedModule,
+    FormsModule,
+    ReactiveFormsModule,
+    IdentityModule,
+    HttpClientModule,
+  ],
   exports: [
     LocationsListComponent,
     HomeComponent,
