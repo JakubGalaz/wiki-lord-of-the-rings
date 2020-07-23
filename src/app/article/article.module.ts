@@ -43,8 +43,8 @@ import { HttpClientModule } from '@angular/common/http';
     SharedModule,
     FormsModule,
     ReactiveFormsModule,
-    IdentityModule,
     HttpClientModule,
+    IdentityModule,
   ],
   exports: [
     LocationsListComponent,

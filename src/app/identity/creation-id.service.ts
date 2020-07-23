@@ -1,9 +1,14 @@
 import { Injectable } from '@angular/core';
+import * as uuid from 'uuid';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class CreationIDService {
+  constructor() {}
 
-  constructor() { }
+  getID(): string {
+    const myId = uuid.v4();
+    return myId;
+  }
 }

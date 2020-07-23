@@ -1,3 +1,4 @@
+import { CreationIDService } from './../../identity/creation-id.service';
 import { Router } from '@angular/router';
 import { CharactersService } from './../services/characters.service';
 import { Component, OnInit } from '@angular/core';
@@ -20,7 +21,8 @@ export class AddCharacterComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private charactersService: CharactersService,
-    private router: Router
+    private router: Router,
+    private generateID: CreationIDService
   ) {}
 
   ngOnInit(): void {
@@ -95,8 +97,9 @@ export class AddCharacterComponent implements OnInit {
 
   createCharacter(): Character {
     const today: Date = new Date();
+    const generateId = this.generateID.getID();
     const character = {
-      id: '22',
+      id: generateId,
       name: this.characterForm.value.name,
       section: this.characterForm.value.section,
       creationDate: today,
@@ -106,6 +109,7 @@ export class AddCharacterComponent implements OnInit {
       image: this.characterForm.value.image,
     };
 
+    console.log(character);
     return character;
   }
 
