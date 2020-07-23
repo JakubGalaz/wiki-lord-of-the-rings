@@ -11,6 +11,7 @@ import { SearchComponent } from './search/search.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { WebsiteDescComponent } from './website-desc/website-desc.component';
 import { SharedModule } from './shared/shared.module';
+import { ChangeRiceColorPipe } from './change-rice-color.pipe';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { SharedModule } from './shared/shared.module';
     NotFoundComponent,
     SearchComponent,
     WebsiteDescComponent,
+    ChangeRiceColorPipe,
   ],
   imports: [
     BrowserModule,

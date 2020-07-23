@@ -27,7 +27,9 @@
             style="cursor: pointer;"
           >
             <td (click)="routeTo(item)">{{ item.name }}</td>
-            <td>w {{ item.typ }}</td>
+            <td>
+              <div [innerHTML]="item.typ | changeRiceColor"></div>
+            </td>
           </tr>
         </tbody>
       </table>
