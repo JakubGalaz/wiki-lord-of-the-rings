@@ -66,25 +66,25 @@
   },
   {
     "id": "7",
-    "name": "Leśne królestwo",
+    "name": "Erebor",
     "section": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
 
     "creationDate": "Fri Jul 24 2020 07:21:48",
     "position": "Śródziemie",
-    "locationType": "Kraj",
-    "residents": "Elfy",
-    "image": "https://live.staticflickr.com/4361/36116043994_c17390114a_b.jpg"
+    "locationType": "Miasto",
+    "residents": "Krasnoludy",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Dale_Erebor.jpg"
   },
   {
     "id": "8",
-    "name": "Leśne królestwo",
+    "name": "Esgaroth",
     "section": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
 
     "creationDate": "Fri Jul 24 2020 07:21:48",
     "position": "Śródziemie",
-    "locationType": "Kraj",
-    "residents": "Elfy",
-    "image": "https://live.staticflickr.com/4361/36116043994_c17390114a_b.jpg"
+    "locationType": "Miasto",
+    "residents": "Ludzie",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Esgaroth.jpg"
   },
   {
     "id": "9",
@@ -94,19 +94,19 @@
     "creationDate": "Fri Jul 24 2020 07:21:48",
     "position": "Śródziemie",
     "locationType": "Kraj",
-    "residents": "Elfy",
+    "residents": "Sauron",
     "image": "https://live.staticflickr.com/4361/36116043994_c17390114a_b.jpg"
   },
   {
     "id": "10",
-    "name": "Leśne królestwo",
+    "name": "Barad-dur",
     "section": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
 
     "creationDate": "Fri Jul 24 2020 07:21:48",
     "position": "Śródziemie",
     "locationType": "Kraj",
-    "residents": "Elfy",
-    "image": "https://live.staticflickr.com/4361/36116043994_c17390114a_b.jpg"
+    "residents": "Sauron",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/2/27/Barad-dur_2_avec_ombre.gif"
   },
   {
     "id": "11",
