@@ -37,7 +37,7 @@ export class AddLocationComponent implements OnInit {
           Validators.required,
           Validators.minLength(4),
           Validators.maxLength(15),
-          Validators.pattern('[a-zA-Z ąćśńółę]*'),
+          Validators.pattern('[a-zA-Z ąćśńółęĄŚĆŃŁĘ]*'),
         ],
       ],
       position: [
@@ -46,7 +46,7 @@ export class AddLocationComponent implements OnInit {
           Validators.required,
           Validators.minLength(4),
           Validators.maxLength(15),
-          Validators.pattern('[a-zA-Z ąćśńółę]*'),
+          Validators.pattern('[a-zA-Z ąćśńółęĄŚĆŃŁĘ]*'),
         ],
       ],
       residents: [
@@ -55,7 +55,7 @@ export class AddLocationComponent implements OnInit {
           Validators.required,
           Validators.minLength(4),
           Validators.maxLength(15),
-          Validators.pattern('[a-zA-Z ąćśńółę]*'),
+          Validators.pattern('[a-zA-Z ąćśńółęĄŚĆŃŁĘ]*'),
         ],
       ],
       locationType: ['Miasto', [Validators.required]],
