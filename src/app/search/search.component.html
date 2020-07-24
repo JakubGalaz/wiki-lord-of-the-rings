@@ -28,7 +28,7 @@
           >
             <td (click)="routeTo(item)">{{ item.name }}</td>
             <td>
-              <div [innerHTML]="item.typ | changeRiceColor"></div>
+              {{ item.typ }}
             </td>
           </tr>
         </tbody>

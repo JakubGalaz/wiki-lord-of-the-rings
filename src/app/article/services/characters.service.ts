@@ -1,7 +1,8 @@
 import { Injectable, OnDestroy } from '@angular/core';
 import { Character } from '../interfaces/Character';
-import { Observable, Subscription } from 'rxjs';
+import { Observable, Subscription, throwError } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
+import { retry, catchError } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root',
@@ -20,7 +21,9 @@ export class CharactersService implements OnDestroy {
   }
 
   public getJSON(): Observable<any> {
-    return this.http.get('../../../assets/characters.json');
+    return this.http
+      .get('../../../assets/characters.json')
+      .pipe(retry(2), catchError(this.handleError));
   }
 
   postCharacter(character: Character): void {
@@ -40,5 +43,16 @@ export class CharactersService implements OnDestroy {
 
   ngOnDestroy(): void {
     this.sub.unsubscribe();
+  }
+
+  handleError(error) {
+    let errorMessage = '';
+    if (error.error instanceof ErrorEvent) {
+      errorMessage = `Error: ${error.error.message}`;
+    } else {
+      errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
+    }
+    window.alert(errorMessage);
+    return throwError(errorMessage);
   }
 }

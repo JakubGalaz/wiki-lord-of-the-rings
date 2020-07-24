@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, OnDestroy } from '@angular/core';
 import { Location } from '../interfaces/Location';
-import { Observable, Subscription, combineLatest } from 'rxjs';
+import { Observable, Subscription, combineLatest, throwError } from 'rxjs';
+import { retry, catchError } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root',
@@ -20,7 +21,9 @@ export class LocationsService implements OnDestroy {
   }
 
   public getJSON(): Observable<any> {
-    return this.http.get('../../../assets/locations.json');
+    return this.http
+      .get('../../../assets/locations.json')
+      .pipe(retry(2), catchError(this.handleError));
   }
 
   postLocation(location: Location): void {
@@ -40,5 +43,16 @@ export class LocationsService implements OnDestroy {
 
   ngOnDestroy(): void {
     this.sub.unsubscribe();
+  }
+
+  handleError(error) {
+    let errorMessage = '';
+    if (error.error instanceof ErrorEvent) {
+      errorMessage = `Error: ${error.error.message}`;
+    } else {
+      errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
+    }
+    window.alert(errorMessage);
+    return throwError(errorMessage);
   }
 }
