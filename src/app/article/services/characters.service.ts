@@ -45,7 +45,7 @@ export class CharactersService implements OnDestroy {
     this.sub.unsubscribe();
   }
 
-  handleError(error) {
+  handleError(error: any): Observable<string> {
     let errorMessage = '';
     if (error.error instanceof ErrorEvent) {
       errorMessage = `Error: ${error.error.message}`;
